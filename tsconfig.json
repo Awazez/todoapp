@@ -1,4 +1,5 @@
 {
+  // enable this rule:
   "compilerOptions": {
     "target": "es5",
     "lib": [
@@ -22,5 +23,8 @@
   },
   "include": [
     "src"
-  ]
+  ],
+
+
+
 }
