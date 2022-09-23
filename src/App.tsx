@@ -33,7 +33,8 @@ function App() {
   };
   return (
     <div className="App">
-      <div>
+      <div className="wrapper">
+      <div >
         <Title />
       </div>
       <div>
@@ -43,6 +44,7 @@ function App() {
         {todos.map((todo) => (<Todo key={todo.id} todo={todo} toggleComplete={toggleComplete} handleDelete={handleDelete} handleEdit={handleEdit}/>
         ))}
       </div>
+    </div>
     </div>
   );
 }
