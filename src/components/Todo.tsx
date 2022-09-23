@@ -24,8 +24,7 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,}:
     }
   };
 
-
-
+  
   return (
     <div className="todo">
       <input
