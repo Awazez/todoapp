@@ -22,8 +22,8 @@ const handleSubmit = async(e: any) => {
 };
 return (
     <FormGroup onSubmit={handleSubmit}>
-        <div className="task-input">
-        <input type="text" id="standard-basic" label="Add a new task" variant="outlined" value={title} onChange= {(e:any) => setTitle(e.target.value)} />
+        <div className="input_container">
+        <TextField type="text" id="standard-basic" label="Add a new" variant="outlined" value={title} onChange= {(e:any) => setTitle(e.target.value)} />
         </div>
             <div className="btn_container">
                 <Button variant="outlined" onClick={handleSubmit}>Add</Button>
