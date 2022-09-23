@@ -90,6 +90,13 @@ body{
 .task-input input::placeholder{
   color: #bfbfbf;
 }
+
+.form{
+  display: flex;
+  align-items: center;
+  justify-content: justify;
+  margin-left: 50px;
+}
 .controls, li{
   display: flex;
   align-items: center;
