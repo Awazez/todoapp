@@ -7,15 +7,6 @@ import Todo from "./components/Todo";
 import {collection,query,onSnapshot,doc,updateDoc,deleteDoc,} from "firebase/firestore";
 import { db } from "./firebase";
 
-
-interface IProps {
-  todo: any;
-  toggleComplete: any
-  handleDelete: any
-  handleEdit: any
-}
-
-
 function App() {
   const [todos, setTodos] = React.useState([]);
 
