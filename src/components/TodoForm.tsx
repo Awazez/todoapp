@@ -21,14 +21,11 @@ const handleSubmit = async(e: any) => {
     }
 };
 return (
-    <FormGroup onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
         <div className="input_container">
-        <TextField type="text" id="outlined-basic" label="Add Todo" variant="outlined" value={title} onChange= {(e:any) => setTitle(e.target.value)} />
+        <TextField type="text" id="standard-basic" label="Add a new task" variant="outlined" value={title} onChange= {(e:any) => setTitle(e.target.value)} />
         </div>
-            <div className="btn_container">
-                <Button onClick={handleSubmit}>Add</Button>
-            </div>
-        </FormGroup>
+        </form>
 );
 
 }

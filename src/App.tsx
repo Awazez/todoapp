@@ -7,15 +7,6 @@ import Todo from "./components/Todo";
 import {collection,query,onSnapshot,doc,updateDoc,deleteDoc,} from "firebase/firestore";
 import { db } from "./firebase";
 
-
-interface IProps {
-  todo: any;
-  toggleComplete: any
-  handleDelete: any
-  handleEdit: any
-}
-
-
 function App() {
   const [todos, setTodos] = React.useState([]);
 
@@ -42,16 +33,20 @@ function App() {
   };
   return (
     <div className="App">
-      <div>
+      <div className="wrapper">
+      <div >
         <Title />
       </div>
       <div>
         <TodoForm />
       </div>
+      <div className="controls">
+      </div>
       <div className="todo_container">
         {todos.map((todo) => (<Todo key={todo.id} todo={todo} toggleComplete={toggleComplete} handleDelete={handleDelete} handleEdit={handleEdit}/>
         ))}
       </div>
+    </div>
     </div>
   );
 }
