@@ -91,11 +91,20 @@ body{
   justify-content: space-between;
 }
 
-
 #todo-input {
   border:none;
   font-size: 18px;
   margin-top: 10px;
   margin-left: 10px;
   border-bottom: 1px;
+}
+
+.button-complete,
+.button-delete,
+.button-edit {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 50%;
 }
