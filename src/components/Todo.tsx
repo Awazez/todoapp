@@ -23,10 +23,9 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,}:
       setNewTitle(e.target.value);
     }
   };
-
-  
   return (
     <div className="todo">
+      <div className="task-box">
       <input
         style={{ textDecoration: todo.completed && "line-through" }}
         type="text"
@@ -50,6 +49,7 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,}:
         <button className="button-delete" onClick={() => handleDelete(todo.id)}>
           <DeleteIcon id="i" />
         </button>
+      </div>
       </div>
     </div>
   );
