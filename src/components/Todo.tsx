@@ -25,6 +25,9 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,}:
   };
   return (
     <div className="todo">
+      <div className="todo-box">
+
+      
       <input id="todo-input" style={{ textDecoration: todo.completed && "line-through" }}  type="text" value={todo.title === "" ? newTitle : todo.title} className="task-box" onChange={handleChange}/>
       <div>
         <button className="button-complete" onClick={() => toggleComplete(todo)}>
@@ -36,6 +39,7 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,}:
         <button className="button-delete" onClick={() => handleDelete(todo.id)}>
           <DeleteIcon id="i" />
         </button>
+        </div>
       </div>
     </div>
   );
