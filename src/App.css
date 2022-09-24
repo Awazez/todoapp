@@ -71,8 +71,8 @@ body{
   height: 100%;
   width: 100%;
   margin-top: 15px;
-  padding-bottom: 15px;
   font-size: 14px;
+  vertical-align: auto;
   border-bottom: 1px solid #ccc;
   padding: 0 20px 0 53px;
 }
@@ -81,8 +81,16 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: none;
+  padding: 25px 0;
+  text-align: center;
 }
+
+.todo-button {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
 
 #todo-input {
   border:none;
