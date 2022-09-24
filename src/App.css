@@ -94,9 +94,6 @@ body{
 #todo-input {
   border:none;
   font-size: 18px;
-  margin-top: 10px;
-  margin-left: 10px;
-  border-bottom: 1px;
 }
 
 .button-complete,
