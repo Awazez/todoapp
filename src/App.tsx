@@ -40,6 +40,13 @@ function App() {
       <div>
         <TodoForm />
       </div>
+      <div className="controls">
+        <div className="filters">
+          <span className="active" id="all">All</span>
+          <span id="pending">En cours</span>
+          <span id="completed">Finis</span>
+        </div>
+      </div>
       <div className="todo_container">
         {todos.map((todo) => (<Todo key={todo.id} todo={todo} toggleComplete={toggleComplete} handleDelete={handleDelete} handleEdit={handleEdit}/>
         ))}
