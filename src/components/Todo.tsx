@@ -25,7 +25,7 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,}:
   };
   return (
     <div className="todo">
-      <input type="text" value={todo.title === "" ? newTitle : todo.title} className="task-box" onChange={handleChange}/>
+      <input id="todo-input" type="text" value={todo.title === "" ? newTitle : todo.title} className="task-box" onChange={handleChange}/>
       <div>
         <button className="button-complete" onClick={() => toggleComplete(todo)}>
           <CheckCircleIcon id="i" />
