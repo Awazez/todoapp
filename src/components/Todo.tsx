@@ -25,31 +25,17 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,}:
   };
   return (
     <div className="todo">
-      <div className="task-box">
-      <input
-        style={{ textDecoration: todo.completed && "line-through" }}
-        type="text"
-        value={todo.title === "" ? newTitle : todo.title}
-        className="list"
-        onChange={handleChange}
-      />
+      <input type="text" value={todo.title === "" ? newTitle : todo.title} className="task-box" onChange={handleChange}/>
       <div>
-        <button
-          className="button-complete"
-          onClick={() => toggleComplete(todo)}
-        >
+        <button className="button-complete" onClick={() => toggleComplete(todo)}>
           <CheckCircleIcon id="i" />
         </button>
-        <button
-          className="button-edit"
-          onClick={() => handleEdit(todo, newTitle)}
-        >
+        <button className="button-edit" onClick={() => handleEdit(todo, newTitle)}>
           <EditIcon id="i" />
         </button>
         <button className="button-delete" onClick={() => handleDelete(todo.id)}>
           <DeleteIcon id="i" />
         </button>
-      </div>
       </div>
     </div>
   );
