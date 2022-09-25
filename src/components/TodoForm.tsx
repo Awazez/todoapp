@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { collection, addDoc } from "firebase/firestore";
 import { TextField, Button, FormGroup } from "@mui/material";
 
@@ -6,7 +6,7 @@ import { TextField, Button, FormGroup } from "@mui/material";
 import {db} from "../firebase";
 
 export default function AddTodo() {
-    const [title, setTitle] = React.useState("");
+    const [title, setTitle] = useState("");
 
 
 const handleSubmit = async(e: any) => {
