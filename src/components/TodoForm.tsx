@@ -1,13 +1,10 @@
 import React, {useState, SyntheticEvent} from "react";
 import { collection, addDoc } from "firebase/firestore";
 import { TextField } from "@mui/material";
-
-// Import firebase configuration from firebase.ts file
 import {db} from "../firebase";
 
-export default function AddTodo() {
+function AddTodo() {
     const [title, setTitle] = useState("");
-
 
 const handleSubmit = async(e:SyntheticEvent) => {
     e.preventDefault();
@@ -29,3 +26,4 @@ return (
 
 }
 
+export default AddTodo;
