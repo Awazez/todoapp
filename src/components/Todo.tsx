@@ -2,6 +2,7 @@ import React ,{useState} from "react";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
+import types from "../global/type"
 
 
 interface IProps {
@@ -10,7 +11,6 @@ interface IProps {
   handleDelete: any
   handleEdit: any
 }
-
 
 function Todo({ todo, toggleComplete, handleDelete, handleEdit,}: IProps) {
   const [newTitle, setNewTitle] = useState(todo.title);
