@@ -8,7 +8,7 @@ import {collection,query,onSnapshot,doc,updateDoc,deleteDoc,} from "firebase/fir
 import { db } from "./firebase";
 
 function App() {
-  const [todos, setTodos] = React.useState([]);
+  const [todos, setTodos] = React.useState<any[]>([]);
 
   React.useEffect(() => {
     const q = query(collection(db, "todos"));
