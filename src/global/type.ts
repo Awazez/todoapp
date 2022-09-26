@@ -1,10 +1,11 @@
-export type Todo = {
-    id: string;
-    title: string;
-    done: boolean;
-    e:any;
+
+  interface IProps {
+    todo: any;
+    toggleComplete: any
+    handleDelete: any
+    handleEdit: any
   }
 
-  export default type; 
+  export default  IProps; 
 
   

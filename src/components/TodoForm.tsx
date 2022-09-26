@@ -1,5 +1,6 @@
 import React, {useState, SyntheticEvent} from "react";
 import { collection, addDoc } from "firebase/firestore";
+import IProps from "../global/type"
 import { TextField } from "@mui/material";
 import {db} from "../firebase";
 
