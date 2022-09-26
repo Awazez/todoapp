@@ -1,6 +1,5 @@
 import React, {useState, SyntheticEvent} from "react";
 import { collection, addDoc } from "firebase/firestore";
-import {IProps} from "../global/type"
 import { TextField } from "@mui/material";
 import {db} from "../firebase";
 
@@ -10,7 +9,7 @@ function AddTodo() {
 const handleSubmit = async(e:SyntheticEvent) => {
     e.preventDefault();
     if (title !== "") {
-        await addDoc<unknown>(collection(db, "todos"),{
+        await addDoc<any>(collection(db, "todos"),{
             title,
             completed: false,
         });
