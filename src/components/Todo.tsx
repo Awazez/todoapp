@@ -1,20 +1,14 @@
-import React from "react";
+import {useState, ChangeEvent} from "react";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
+import {IProps} from "../global/type"
 
 
-interface IProps {
-  todo: any;
-  toggleComplete: any
-  handleDelete: any
-  handleEdit: any
-}
+function Todo({ todo, toggleComplete, handleDelete, handleEdit,}: IProps) {
+  const [newTitle, setNewTitle] = useState(todo.title);
 
-export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,}: IProps) {
-  const [newTitle, setNewTitle] = React.useState(todo.title);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     if (todo.complete === true) {
       setNewTitle(todo.title);
@@ -43,3 +37,5 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,}:
   );
 
 }
+
+export default Todo;

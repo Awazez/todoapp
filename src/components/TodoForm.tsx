@@ -1,23 +1,19 @@
-import React from "react";
+import {useState, SyntheticEvent} from "react";
 import { collection, addDoc } from "firebase/firestore";
-import { TextField, Button, FormGroup } from "@mui/material";
-
-// Import firebase configuration from firebase.ts file
+import { TextField } from "@mui/material";
 import {db} from "../firebase";
 
-export default function AddTodo() {
-    const [title, setTitle] = React.useState("");
+function AddTodo() {
+    const [title, setTitle] = useState("");
 
-
-const handleSubmit = async(e: any) => {
+const handleSubmit = async(e:SyntheticEvent) => {
     e.preventDefault();
     if (title !== "") {
-        await addDoc<unknown>(collection(db, "todos"),{
+        await addDoc<any>(collection(db, "todos"),{
             title,
             completed: false,
         });
         setTitle("")
-
     }
 };
 return (
@@ -30,3 +26,4 @@ return (
 
 }
 
+export default AddTodo;
