@@ -1,18 +1,20 @@
 import "./App.css";
-import {useState, useEffect} from "react";
+import {useState, useEffect, ChangeEvent} from "react";
 import Title from "./components/Title";
 import TodoForm from "./components/TodoForm";
 import Todo from "./components/Todo";
 import {collection,query,onSnapshot,doc,updateDoc,deleteDoc,} from "firebase/firestore";
 import { db } from "./firebase";
+import {Provider} from "../src/global/type"
+
 
 function App() {
-  const [todos, setTodos] = useState<any[]>([]);
+  const [todos, setTodos] = useState<Provider[]>([]);
 
   useEffect(() => {
     const q = query(collection(db, "todos"));
     const unsub = onSnapshot(q, (querySnapshot) => {
-      let todosArray:any = [];
+      let todosArray:Array<any> = [];
       querySnapshot.forEach((doc) => {
         todosArray.push({ ...doc.data(), id: doc.id });
       });
