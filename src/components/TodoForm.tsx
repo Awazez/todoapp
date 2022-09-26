@@ -1,4 +1,4 @@
-import React, {useState, SyntheticEvent} from "react";
+import {useState, SyntheticEvent} from "react";
 import { collection, addDoc } from "firebase/firestore";
 import { TextField } from "@mui/material";
 import {db} from "../firebase";
