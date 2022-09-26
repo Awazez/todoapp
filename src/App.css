@@ -10,6 +10,8 @@
 
 .App {
   text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 body{
@@ -19,7 +21,7 @@ body{
   background: #56B4D3;
 }
 .wrapper{
-  max-width: 405px;
+  width: 405px;
   padding: 28px 0 30px;
   margin: 137px auto;
   background: #fff;
